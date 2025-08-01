@@ -3,13 +3,13 @@ FROM node:18
 WORKDIR /app
 
 COPY package*.json ./
-RUN npm install
+RUN npm install --legacy-peer-deps
 
 COPY . .
 
 RUN npm run build
 
-# Usa nginx para servir a versão de produção
+# Usa nginx para servir a build
 FROM nginx:stable-alpine as production
 COPY --from=0 /app/dist /usr/share/nginx/html
 
