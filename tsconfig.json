@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "preserve",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }, 
+    "types": ["vitest/globals", "node", "cypress"]
+  },
+
+  "include": [
+    "src/**/*.ts",
+    "tests",
+    "vite-env.d.ts",
+    "cypress/**/*.ts"
+  ]
+}
