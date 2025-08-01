@@ -9,11 +9,11 @@ export interface ApiResponse<T> {
 
 // Criação da instância Axios com configuração global
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000/api/v1',
+  baseURL: import.meta.env.VITE_API_BASE_URL || 'https://eyehealth-api.onrender.com/api/v1',
   headers: {
     Accept: 'application/json',
     'Content-Type': 'application/json',
-    Authorization: import.meta.env.VITE_API_TOKEN,
+    Authorization: import.meta.env.VITE_API_TOKEN ?? "wQ8ehU2x4gj93CH9lMTnelQO3GcFvLzyqn8Fj3WA0ffQy57I60",
   },
 })
 
